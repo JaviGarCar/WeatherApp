@@ -7,20 +7,74 @@
     <meta name="theme-color" content="#000">
     <meta name="description" content="Weather App">
     <meta name="keywords" content="Weather app js css html">
-
     <link rel="stylesheet" href="./style/index.css">
     <link rel="stylesheet" href="./style/resources.css">
+    
     <link rel="shortcut icon" href="./res/icons/favicon96x96.ico">
     <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c" rel="stylesheet">
    
     <title>Document</title>
 </head>
 <body>
-    <div class="lds-dual-ring center asd"></div>
+    <div class="asd lds-dual-ring center"></div>
     <main>
+        
+        <button id="open-menu">
+            <img src="./res/icons/menu.png" alt="menu"
+            class="icon-sm-28">
+        </button>
+        
+        <!-- Current weather -->
+        <section id="current-weather">
+            <h1 class="location-label" id="City">City</h1>
+        
+            <div class="flex-container" id="temp-summary">
+                <div>
+                    <img src="./res/summary-icons/clear-day-white.png" alt="icono temperatura">
+                </div>
+                <div>
+                    <h1 id="grados">420&#176</h1>
+                    <p id="etiqueta-resumen">Clear day</p>
+                </div>
+            </div>
+            <div class="flex-container" id="humedad-container">
+                <div>
+                    <img class="icon-sm-30" src="./res/icons/humidity.png" 
+                    alt="humedad icono">
+                    <span>20%</span>
+                </div>
+                <div>
+                    <img src="./res/icons/wind-speed-flag.png" 
+                    alt="viento icono" class="icon-sm-30">
+                    <span>3 m/h</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bottom section -->
+        <section class="panel-inferior">
+            <button class="riple centerX" id="toggle-daily">
+                <img src="./res/icons/up-arrow.png" alt="botton desplegar dias">
+            </button>
+            <div id="daily" class="cuerpo-inferior">
+                <div class="flex-container weather-box current-day">
+                    <div>
+                        <h1>
+                            Sunday
+                        </h1>
+                    </div>
+                    <div class="flex-container">
+                        <div>
+                            18&#176
+                        </div>
+                    <div>
+                        <img class="icon-sm-28" src="./res/summary-icons/clear-day-white.png" alt="icono">
+                    </div>
+                </div>
+            </div>
+        </section>
 
     </main>
-
 
     <!--Scripts-->
     <script src="./scripts/index.js"></script>
